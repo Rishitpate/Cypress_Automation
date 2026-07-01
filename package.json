@@ -1,0 +1,32 @@
+{
+  "name": "cypress_example",
+  "version": "1.0.0",
+  "description": "cypress demo project",
+  "keywords": [
+    "cypress",
+    "cucumber"
+  ],
+  "license": "ISC",
+  "author": "rishit",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^15.6.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "dayjs": "^1.11.19"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^23.2.1",
+    "@cypress/browserify-preprocessor": "latest",
+    "cypress-downloadfile": "^1.2.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress/integration/examples/cucumber_bdd/**/*.js"
+    ]
+  }
+}
